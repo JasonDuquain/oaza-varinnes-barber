@@ -15,7 +15,8 @@
     --pink: hsl(2, 84%, 73%);
     --pink-700: hsl(2, 84%, 61%);
     --blue: hsl(201, 100%, 21%);
-  
+    --transparent-pink: transparent;
+    --transparent-blue: transparent;
 }
 
 *, ::before, ::after {
@@ -75,8 +76,6 @@ body {
   &__heading span {
     display: block;
   }
-  
-  
   
   
   
@@ -203,8 +202,10 @@ body {
     background-attachment:fixed;
     background-size:cover;
     background-position: center top;
-    
     animation: zoomin 9s 1;
+    /** attempt to fix the img being stacked over the btn and h1 during the animation **/
+    position: relative;
+    z-index: -1;
   }
   
   @-webkit-keyframes zoomin {
@@ -224,9 +225,50 @@ body {
 
 
 .product {
-  padding: 8em 2em 2em 2em;
+  padding: 8em 2em 8em 2em;
   display: flex;
-  
+  flex-wrap: wrap;
+
+  &__svg {
+    --pink: transparent;
+    --blue: transparent;
+    --transparent-blue: hsl(201, 100%, 21%);
+    --transparent-pink: hsl(2, 84%, 61%);
+    stroke-width: 2px;
+  }
+
+  &__heading-main {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__heading-one {
+    position: relative;
+    line-height: 1;
+
+    & span {
+      display: block;
+      
+    }
+
+    & span:first-of-type {
+      font-size: 4.5rem;
+      color: var(--gray-300);
+      text-transform: uppercase;
+    }
+
+    & span:last-of-type {
+      font-size: 2.7rem;
+      position: absolute;
+      bottom: .25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+      color: black;
+    }
+
+  }
   
   &__summary {
     flex: 0 0 60%;
@@ -265,6 +307,7 @@ body {
     position: relative;
     overflow: hidden;
     transition: color 200ms;
+    background-color: transparent;
     
     &:hover {
       color: #fff;
@@ -273,7 +316,7 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-color: var(--pink);
+      background-color: var(--pink-100);
       top: 0;
       left: 0;
       right: 0;
@@ -350,12 +393,61 @@ body {
   }
   
   
-  
-  
-  
+}
+
+.product--two {
+  flex-direction: row-reverse;
+  background-color: var(--pink-100);
+
+  &__btn {
+    z-index: 0;
+
+    &:hover {
+      color: var(--pink);
+    }
+    
+    &::after {
+      background-color: #fff;
+      z-index: -1;
+    }
+    
+  }
+
+  & .product__images-bg {
+    background-color: white;
+    margin-right: auto;
+  }
+
+  & .product__summary {
+    text-align: right;
+  }
+
+  & .product__para {
+    margin-left: auto;
+  }
+
+  & .product__image-one {
+    width: 130%;
+    transform: translate(-100px, 10px);
+  }
+
+  & .product__image-two {
+    height: 100%;
+    transform: translate(26px, 10px)
+  }
+   
 }
 
 
+.location {
+
+  padding: 8em 2em;
+
+  &__svg {
+    
+  }
+
+}
 
 
 
