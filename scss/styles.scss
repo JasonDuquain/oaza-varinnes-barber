@@ -223,12 +223,8 @@ body {
   
 }
 
-
-.product {
-  padding: 8em 2em 8em 2em;
-  display: flex;
-  flex-wrap: wrap;
-
+/**** GENERAL SECT HEADING STYLES ****/
+.section {
   &__svg {
     --pink: transparent;
     --blue: transparent;
@@ -269,6 +265,15 @@ body {
     }
 
   }
+}
+/**** END GENERAL SECT HEADING STYLES ****/
+
+.product {
+  padding: 8em 2em 8em 2em;
+  display: flex;
+  flex-wrap: wrap;
+
+  
   
   &__summary {
     flex: 0 0 60%;
@@ -438,10 +443,101 @@ body {
    
 }
 
+.secrets {
+  padding: 8em 2em;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &__cell--one {
+    grid-column: 1 / 2;
+    
+  }
+
+  &__before-after {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    width: 549px;
+    height: 400px;
+  }
+
+  &__img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 549px;
+    height: 400px;
+  }
+
+  &__img--one {
+    background-image: url(../img/before.jpg);
+  }
+
+  &__img--two {
+    background-image: url(../img/after.jpg);
+    width: 50%;
+  }
+
+  &__range {
+    //-webkit-appearance: slider-vertical;
+    cursor: w-resize;
+    filter: contrast(.5);
+    width: 549px;
+  }
+
+  &__cell--two {
+    grid-column: 2 / 3;
+    padding: 2em 2em 2em 4em;
+  }
+
+  &__heading--two {
+    font-family: 'Playfair Display', serif;
+    color: var(--pink-700);
+    font-weight: 400;
+  }
+
+  &__heading--three {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  &__nums {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  &__nums h2 {
+    font-size: 4.5rem;
+    color: var(--gray-300);
+    font-weight: 700;
+    
+  }
+
+  &__nums span {
+    color: var(--pink-700);
+    font-size: 1.5rem;
+    display: inline-block;
+    font-weight: 300;  
+    transform: translateX(-5rem);
+  }
+
+  &__para {
+    flex: 0 0 100%;
+    font-size: .9rem;
+  }
+
+
+}
 
 .location {
 
-  padding: 8em 2em;
+  padding: 9em;
 
   &__svg {
     
