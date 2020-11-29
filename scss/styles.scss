@@ -642,6 +642,16 @@ body {
     
   }
 
+  &__five .services__bg {
+    background-image: url(../img/service3.jpg);
+    
+  }
+
+  &__six .services__bg {
+    background-image: url(../img/service4.jpg);
+    
+  }
+
 
   &__summary {
     flex: 0 0 60%;
@@ -679,6 +689,55 @@ body {
 
 
 }
+
+.services__link--two.active {
+  color: green;
+}
+
+
+.progress {
+  margin-top: 8rem;
+  padding: 8em 2em;
+  background-color: var(--gray-400);
+
+}
+
+circle {
+  
+}
+
+circle.animate {
+  stroke-dashoffset: 135;
+  //stroke-dasharray: 0 627;
+  animation: hay 2s forwards;
+}
+
+circle.animate--two {
+  stroke-dashoffset: 135;
+  //stroke-dasharray: 0 500;
+  animation: haytwo 2s forwards;
+}
+
+@keyframes hay {
+  0% {
+    stroke-dasharray: 0% 100%;
+  }
+
+  100% {
+    stroke-dasharray: 50% 50%;
+  }
+}
+
+@keyframes haytwo {
+  0% {
+    stroke-dasharray: 0% 100%;
+  }
+
+  100% {
+    stroke-dasharray: 80% 20%;
+  }
+}
+
 
 
 
