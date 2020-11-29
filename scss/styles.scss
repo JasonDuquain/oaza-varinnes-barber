@@ -59,15 +59,13 @@ body {
     font-weight: 700;
   }
   
-  
-  
   &__heading {
     font-family: 'Playfair Display', serif;
     color: #fff;
-    font-size: 9vw;
+    font-size: 6vw;
     position: absolute;
     white-space: nowrap;
-    top: 42%;
+    top: 55%;
     transform: translateY(-50%);
     font-weight: 300;
     line-height: 1.15;
@@ -76,7 +74,6 @@ body {
   &__heading span {
     display: block;
   }
-  
   
   
   &__header {
@@ -536,12 +533,150 @@ body {
 }
 
 .location {
-
+  display: flex;
+  justify-content: space-between;
   padding: 9em;
 
   &__svg {
     
   }
+
+  &__relative {
+    position: relative;
+  }
+
+  &__heading {
+    position: absolute;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: .75rem;
+
+  }
+
+  &__heading span {
+    display: block;
+  }
+
+}
+
+.services {
+  padding: 8em 2em;
+  &__wrap {
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 20% 3rem 20%;
+  }
+
+  &__item {
+    background-color: var(--gray-300);
+    flex: 0 0 20%;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    & span {
+      margin-top: 1rem;
+      text-transform: uppercase;
+      font-size: .8em;
+      color: var(--gray-800);
+    }
+  }
+
+  &__link.active {
+    border: 1px solid red;
+  }
+
+  &__svg {
+
+  }
+
+  &__main {
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid red;
+  }
+
+  &__pow {
+    display: flex;
+    display: none;
+  }
+
+  &__pow.active {
+    display: flex;
+  }
+  
+  &__bg {
+    background-image: url(../img/service1.jpg);
+    background-size: cover;
+    flex: 0 0 40%;
+  }
+
+  &__two .services__bg {
+    background-image: url(../img/service2.jpg);
+    
+  }
+
+  &__three .services__bg {
+    background-image: url(../img/service3.jpg);
+    
+  }
+
+  &__four .services__bg {
+    background-image: url(../img/service4.jpg);
+    
+  }
+
+
+  &__summary {
+    flex: 0 0 60%;
+    padding: 1rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__para-wrap {
+    font-size: .85rem;
+    margin-bottom: 1rem;
+  }
+
+  &__para:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    width: 200px;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: var(--pink-700);
+    display: block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    border-radius: 99em;
+    font-weight: 700;
+  }
+
+
+
 
 }
 

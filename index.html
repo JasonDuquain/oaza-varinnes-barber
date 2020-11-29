@@ -9,7 +9,8 @@
     <title>fall</title>
 </head>
 <body>
-   <svg style="display: block;" width="0" height="0" id="logo" viewBox="0 0 227 113.7">
+   <svg style="display: block;" width="0" height="0" id="logo--svg" viewBox="0 0 227 113.7">
+     <g id="logo">
       <path style="fill:var(--blue); stroke: var(--transparent-blue);" d="M143.5,81.5c2.6-2.4,5.2-4.9,7.9-7.2c-1.5-3.4-3.1-6.8-4.8-10.1c-2.8,2.4-5.5,4.9-8.1,7.4     C140.2,74.8,141.9,78.1,143.5,81.5z"></path>
       <path style="fill:var(--blue); stroke: var(--transparent-blue);" d="M130.6,78.9c-2.8,2.8-5.6,5.6-8.3,8.5c2,3.2,3.9,6.4,5.7,9.7c2.5-2.8,5.1-5.4,7.8-8.1     C134.2,85.6,132.4,82.2,130.6,78.9z"></path>
       <path style="fill:var(--pink); stroke: var(--transparent-pink);" d="M227,0.4c-46.2,9.9-87.1,34.3-117.9,67.9c2.6,3.3,4.8,6.3,7.2,9.8C147.5,45.4,185.2,19,227,0.4z"></path>
@@ -20,6 +21,24 @@
       <path style="fill:var(--blue); stroke: var(--transparent-blue);" d="M57.2,0.2c10.1,4,19.4,9.2,28.4,15.1c1.9-1.4,4-2.9,6-4.2C80.9,5.9,69.4,2.2,57.2,0.2z"></path>
       <path style="fill:var(--blue); stroke: var(--transparent-blue);" d="M0,0c46.2,28.5,85.2,67.5,113.7,113.7c2.3-2.8,4.7-5.6,7-8.4C94,57.7,51.4,20.1,0,0z"></path>
     </g>
+    <defs>
+      <pattern id="lines" x="0" y="0" width="50" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+        <line x1="0" y1="5" x2="50" y2="5" fill="red" stroke="black" stroke-width="4" />
+      </pattern>
+
+      <pattern id="lines-bounding" x="0" y="0" width="100%" height="100%" patternContentUnits="objectBoundingBox" patternTransform="rotate(-45)" >
+        <line x1="0" y1=".1" x2="1" y2=".1" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".2" x2="1" y2=".2" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".3" x2="1" y2=".3" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".4" x2="1" y2=".4" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".5" x2="1" y2=".5" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".6" x2="1" y2=".6" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".7" x2="1" y2=".7" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".8" x2="1" y2=".8" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1=".9" x2="1" y2=".9" fill="red" stroke="black" stroke-width=".02" />
+        <line x1="0" y1="1" x2="1" y2="1" fill="red" stroke="black" stroke-width=".02" />
+      </pattern>
+    </defs>
   </svg>
    
     <div class="hero">
@@ -32,7 +51,8 @@
         
         <h1 class="hero__heading">
           <span>A little something</span>
-          <span>for the mind and soul</span>
+          <span>for the mind</span>
+          <span>and soul</span>
         </h1>
       </div>
       <header class="hero__header">
@@ -200,6 +220,146 @@
         </symbol>
         <use xlink:href="#location" fill="url(#image-fill)" />
       </svg>
+
+      <div class="location__relative">
+        <svg width="200" height="200">
+          <rect x="0" y="0" width="200" height="200" fill="url(#lines)" />
+        </svg>
+        <h2 class="location__heading">
+          <span>Featured</span>
+          <span>Product</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="section__heading-main product__heading-main">
+        <svg class="section__svg product__svg" width="83.4" height="51.8" viewBox="0 0 247 124">
+          <use xlink:href="#logo" width="227" height="113"/>
+        </svg>
+        <h1 class="section__heading-one product__heading-one">
+          <span>Our Services</span>
+          <span>Our Services</span>
+        </h1>
+      </div>
+
+      <div class="services__wrap">
+          <ul class="services__list">
+            <li class="services__item">
+              <a href="#Facial" class="services__link active">
+                <svg class="services__svg" width="30" height="30" viewBox="0 0 40 40" fill="var(--pink-700)">
+                  <use xlink:href="symbols.svg#icon-search" />
+                </svg>
+                <span>Facial</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a href="#Makeup" class="services__link">
+                <svg class="services__svg" width="30" height="30" viewBox="0 0 40 40" fill="var(--pink-700)">
+                  <use xlink:href="symbols.svg#icon-location" />
+                </svg>
+                <span>Makeup</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a href="#Nail Care" class="services__link">
+                <svg class="services__svg" width="30" height="30" viewBox="0 0 40 40" fill="var(--pink-700)">
+                  <use xlink:href="symbols.svg#icon-envelop" />
+                </svg>
+                <span>Nail Care</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a href="#Hair Style" class="services__link">
+                <svg class="services__svg" width="30" height="30" viewBox="0 0 40 40" fill="var(--pink-700)">
+                  <use xlink:href="symbols.svg#icon-cart" />
+                </svg>
+                <span>Hair Style</span>
+              </a>
+            </li>
+          </ul>
+        <div class="services__main">
+          <div class="services__pow services__one active">
+            <div class="services__bg"></div>
+            <div class="services__summary">
+              <h3 class="services__heading">Facial</h3>
+              <div class="services__para-wrap">
+                <p class="services__para">
+                  It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+                </p>
+                <p class="services__para">
+                  <p class="services__para">
+                    A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there. Lord Vader this is an unexpected visit we are honored by your presence
+                  </p>
+              </p>
+              </div>
+              <a href="Book Appointment" class="services__btn">
+                Get Appointment
+              </a>
+            </div>
+          </div>
+          <div class="services__pow services__two">
+            <div class="services__bg"></div>
+            <div class="services__summary">
+              <h3 class="services__heading">Makeup</h3>
+              <div class="services__para-wrap">
+                <p class="services__para">
+                  It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+                </p>
+                <p class="services__para">
+                  <p class="services__para">
+                    A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there. Lord Vader this is an unexpected visit we are honored by your presence
+                  </p>
+              </p>
+              </div>
+              <a href="Book Appointment" class="services__btn">
+                Get Appointment
+              </a>
+            </div>
+          </div>
+          <div class="services__pow services__three">
+            <div class="services__bg"></div>
+            <div class="services__summary">
+              <h3 class="services__heading">Nail Care</h3>
+              <div class="services__para-wrap">
+                <p class="services__para">
+                  It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+                </p>
+                <p class="services__para">
+                  <p class="services__para">
+                    A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there. Lord Vader this is an unexpected visit we are honored by your presence
+                  </p>
+              </p>
+              </div>
+              <a href="Book Appointment" class="services__btn">
+                Get Appointment
+              </a>
+            </div>
+          </div>
+          <div class="services__pow services__four">
+            <div class="services__bg"></div>
+            <div class="services__summary">
+              <h3 class="services__heading">Hair Style</h3>
+              <div class="services__para-wrap">
+                <p class="services__para">
+                  It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+                </p>
+                <p class="services__para">
+                  <p class="services__para">
+                    A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there. Lord Vader this is an unexpected visit we are honored by your presence
+                  </p>
+              </p>
+              </div>
+              <a href="Book Appointment" class="services__btn">
+                Get Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 
 

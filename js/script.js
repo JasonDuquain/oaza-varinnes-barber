@@ -95,3 +95,24 @@ newArr.forEach((el, idx) => {
   })
 
 })
+
+
+const list = document.querySelector('.services__list');
+const links = document.querySelectorAll('.services__link');
+const mainItems = document.querySelectorAll('.services__pow')
+
+list.addEventListener('click', function(e) {
+  if (!e.target.classList.contains("active") && e.target.classList.contains("services__link")) {
+    links.forEach((el, idx) => {
+      e.target.classList.add("active");
+      el.classList.remove("active");
+      mainItems[idx].classList.remove("active");
+
+      if (mainItems[idx].children[1].firstElementChild.textContent === e.target.getAttribute("href").slice(1))  {
+        mainItems[idx].classList.add("active")
+      }
+    })
+
+    
+  }
+})
